@@ -18,6 +18,13 @@ public class Movement : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-        input.Normalize();
+        input.Normalize(); //Makes our diagonal movement the same as other movement
+        //would be faster w out normalize
+    }
+
+    //called once per Physics frame - Used for physics(Used for movement)
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = input * speed;
     }
 }
