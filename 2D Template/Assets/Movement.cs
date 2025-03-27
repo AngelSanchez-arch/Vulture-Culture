@@ -5,15 +5,17 @@ public class Movement : MonoBehaviour
 {
     public float speed = 0.5f;
     private Rigidbody2D rb;
-    private Vector2 input;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+	private Vector2 input;
+
+	// Start is called once before the first execution of Update after the MonoBehaviour is created
+	void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
+	internal Vector2 lastPos;
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");

@@ -5,12 +5,19 @@ using System;
 
 public class Grid<TGridObject>
 {
+<<<<<<< HEAD
     private int width;
     private int height;
     private float cellSize;
     private Vector3 originPosition;
     private TGridObject[,] gridArray;
     private TextMesh[,] debugTextArray;
+=======
+    private readonly int width;
+    private readonly int height;
+    private readonly float cellSize;
+	private readonly int[,] gridArray;
+>>>>>>> f18169d39a0fdeb7adc5fda5b48ad0535954fbe2
 
     public Grid(int width, int height, float cellSize, Vector3 originPosition, Func<TGridObject> createGridObject)
     {
@@ -25,6 +32,7 @@ public class Grid<TGridObject>
         {
             for (int y = 0; y < gridArray.GetLength(1); y++)
             {
+<<<<<<< HEAD
                 gridArray[x, y] = createGridObject();
             }
         }
@@ -53,6 +61,16 @@ public class Grid<TGridObject>
         }
 
         SetValue(2, 1, 56);
+=======
+				Vector3 vector3 = new(cellSize, cellSize);
+				TextMesh textMesh = UtilsClass.CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x, y), +vector3 * .5f, 30, Color.white, TextAnchor.MiddleCenter);
+                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
+                Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
+            }
+        }
+		Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
+        Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.white, 100f);
+>>>>>>> f18169d39a0fdeb7adc5fda5b48ad0535954fbe2
     }
 
     public int GetWidth()
