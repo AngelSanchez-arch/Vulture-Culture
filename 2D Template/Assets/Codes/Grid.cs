@@ -3,10 +3,10 @@ using CodeMonkey.Utils;
 
 public class Grid
 {
-    private int width;
-    private int height;
-    private float cellSize;
-    private int[,] gridArray;
+    private readonly int width;
+    private readonly int height;
+    private readonly float cellSize;
+	private readonly int[,] gridArray;
 
     public Grid(int width, int height, float cellSize)
     {
@@ -20,12 +20,13 @@ public class Grid
         {
             for (int y = 0; y < gridArray.GetLength(1); y++)
             {
-                UtilsClass.CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x, y), + new Vector3(cellSize, cellSize) * .5f, 30, Color.white, TextAnchor.MiddleCenter);
+				Vector3 vector3 = new(cellSize, cellSize);
+				TextMesh textMesh = UtilsClass.CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x, y), +vector3 * .5f, 30, Color.white, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
             }
         }
-        Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
+		Debug.DrawLine(GetWorldPosition(0, height), GetWorldPosition(width, height), Color.white, 100f);
         Debug.DrawLine(GetWorldPosition(width, 0), GetWorldPosition(width, height), Color.white, 100f);
     }
 
