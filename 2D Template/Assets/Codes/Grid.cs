@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using CodeMonkey.Utils;
 using JetBrains.Annotations;
@@ -6,6 +7,8 @@ using System;
 public class Grid<TGridObject>
 {
 <<<<<<< HEAD
+    public const int HEAT_MAP_MAX_VALUE = 100;
+    public const int HEAT_MAP_MIN_VALUE = 0;
     private int width;
     private int height;
     private float cellSize;
@@ -94,7 +97,7 @@ public class Grid<TGridObject>
     {
         if (x >= 0 && y >= 0 && x < width && y < height)
         {
-            gridArray[x, y] = value;
+            gridArray[x, y] = Mathf.Clamp(value, HEAT_MAP_MAX_VALUE, HEAT_MAP_MIN_VALUE);
             if (OnGridObjectChanged != null) OnGridObjectChanged(this, new OnGridObjectChangedEventArgs { x = x, y = y });
         }
 
@@ -131,3 +134,4 @@ public class Grid<TGridObject>
         return GetGridObject(x, y);
     }
 }
+*/

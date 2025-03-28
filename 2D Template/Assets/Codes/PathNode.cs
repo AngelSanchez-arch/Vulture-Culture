@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class PathNode
 {
@@ -37,3 +37,4 @@ public class PathNode
         return x + "," + y;
     }
 }
+*/

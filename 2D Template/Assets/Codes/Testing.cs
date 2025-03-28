@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 using CodeMonkey.Utils;
 using NUnit.Framework;
@@ -34,6 +35,8 @@ public class Testing : MonoBehaviour
             {
                 heatMapGridObject.AddValue(5);
             }
+            int value = grid.GetValue(UtilsClass.GetMouseWorldPosition();
+            grid.SetValue(position, value = 5);
             grid.AddValue(position, 100, 2, 15);
             grid.SetValue(UtilsClass.GetMouseWorldPosition(), 56);
             Vector3 mouseWorldPosition = UtilsClass.GetMouseWorldPosition();
@@ -64,17 +67,22 @@ public class HeatMapGridObject
     private const int MAX = 100;
 
     private Grid<HeatMapGridObject> grid;
+    private int x;
+    private int y;
     private int value;
 
-    public HeatMapGridObject(Grid<HeatMapGridObject> grid)
+    public HeatMapGridObject(Grid<HeatMapGridObject> grid, int x, int y)
     {
         this.grid = grid;
+        this.x = x;
+        this.y = y;
     }
 
     public void AddValue(int addValue)
     {
         value += addValue;
         Mathf.Clamp(value, MIN, MAX);
+        grid.TriggerGridObjectChanged(x, y)
     }
     public float GetValueNormalized()
     {
@@ -86,3 +94,4 @@ public class HeatMapGridObject
         return value.ToString();
     }
 }
+*/
