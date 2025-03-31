@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Pathfinding;
 using UnityEditor.Rendering;
+using System.Linq;
 
 public partial class NewEnemyAI : MonoBehaviour
 {
@@ -36,6 +37,10 @@ public partial class NewEnemyAI : MonoBehaviour
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
+    public void RandomizePath()
+    {
+        //List<GameObject> shuffledList = nodeList.OrderBy
+    }
     void UpdatePath()
     {
         if (seeker.IsDone())
