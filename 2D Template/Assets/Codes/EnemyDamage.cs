@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
@@ -26,4 +27,9 @@ public class EnemyDamage : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
     }
+
+	internal object TakeDamage(int attackDamage)
+	{
+		throw new NotImplementedException();
+	}
 }
