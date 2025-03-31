@@ -12,9 +12,9 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+	internal Vector2 lastPos;
+	// Update is called once per frame
+	void Update()
     {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
