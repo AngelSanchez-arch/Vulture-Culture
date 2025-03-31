@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 public class Movement : MonoBehaviour
 {
-    public float speed = 0.5f;
+    public float speed;
     private Rigidbody2D rb;
     private Vector2 input;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
