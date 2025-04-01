@@ -15,7 +15,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if (Input.
     }
     public void Movecamera(InputAction.CallbackContext ctx, int pos)
     {
