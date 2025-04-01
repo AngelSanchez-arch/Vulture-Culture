@@ -28,8 +28,8 @@ public class PlayerCombat : MonoBehaviour
 		}
 	}
 
-	
-	void Attack() 
+
+	void Attack()
 	{
 		// Play an attack animation
 		animator.SetTrigger("Attack");
@@ -39,7 +39,7 @@ public class PlayerCombat : MonoBehaviour
 		// Damage them
 		foreach(Collider2D enemy in hitEnemies) 
 		{
-			object value = enemy.GetComponent<EnemyDamage>().TakeDamage(attackDamage);
+			enemy.GetComponent<EnemyDamage>().TakeDamage(attackDamage);
 		}
 	}
 
