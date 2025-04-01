@@ -35,11 +35,11 @@
                 {
                     "name": "Reset Camera",
                     "type": "Button",
-                    "id": "ea3fa773-1a9e-4338-abbf-a4c48a4acddd",
+                    "id": "3c846997-e803-4cb2-9ff2-ca6139d18245",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -243,8 +243,8 @@
                 },
                 {
                     "name": "",
-                    "id": "92e820fe-dfd5-4446-947a-2cf8ae7b725d",
-                    "path": "<Keyboard>/r",
+                    "id": "e88cb7ec-0e03-4766-ae1f-9c0b4462d1f5",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
