@@ -610,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 1205075980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.5973, y: 1.747, z: 0}
+  m_LocalPosition: {x: -7.42, y: 0.759, z: 0}
   m_LocalScale: {x: 1, y: 5.7177196, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,8 +819,9 @@ GameObject:
   - component: {fileID: 1841950724}
   - component: {fileID: 1841950723}
   - component: {fileID: 1841950722}
+  - component: {fileID: 1841950725}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall w
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -936,12 +937,34 @@ Transform:
   m_GameObject: {fileID: 1841950721}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 0.9, z: 0}
+  m_LocalPosition: {x: 6.42, y: 0.759, z: 0}
   m_LocalScale: {x: 1, y: 5.7177196, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1841950725
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841950721}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b630b115e94174344a366d2320bab54f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1899511260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,7 +1046,7 @@ Transform:
   m_GameObject: {fileID: 1899511260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.66, y: -1.6, z: 0}
+  m_LocalPosition: {x: -0.51, y: -1.6, z: 0}
   m_LocalScale: {x: 12.873177, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1044,6 +1067,7 @@ GameObject:
   - component: {fileID: 2129811581}
   - component: {fileID: 2129811580}
   - component: {fileID: 2129811582}
+  - component: {fileID: 2129811584}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1187,7 +1211,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3627c188dbc73cd4c9652f5f8a5e6278, type: 3}
+      - m_Target: {fileID: 11500000, guid: a9993dee5bb0c974fadc97ed36cd18da, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
         m_Mode: 1
@@ -1262,7 +1286,19 @@ MonoBehaviour:
     m_ActionId: 5efe4813-98de-4768-b909-1c39c3123316
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 8ec08c5db64da5e4e90044affb3c278e, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3c846997-e803-4cb2-9ff2-ca6139d18245
     m_ActionName: 'Player/Reset Camera[/Keyboard/c]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -1282,7 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9993dee5bb0c974fadc97ed36cd18da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.2
+  speed: 3
 --- !u!61 &2129811583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1329,6 +1365,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2129811584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129811575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a06b8696cfa149f4cbe93f668ad3cdde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5048274755631664318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1357,6 +1405,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5688769262734718041, guid: f9f6732274302fb4b84fbdb9c6b8f77d, type: 3}
+      propertyPath: wall
+      value: 
+      objectReference: {fileID: 1841950721}
     - target: {fileID: 6225690271556252831, guid: f9f6732274302fb4b84fbdb9c6b8f77d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -1416,7 +1468,7 @@ SceneRoots:
   - {fileID: 37082938}
   - {fileID: 851064635}
   - {fileID: 5048274755631664318}
-  - {fileID: 1899511262}
   - {fileID: 1841950724}
+  - {fileID: 1899511262}
   - {fileID: 1205075983}
   - {fileID: 35174630}
