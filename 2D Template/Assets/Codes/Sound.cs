@@ -2,13 +2,55 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    [SerializeField] private AudioClip WalkingSoundClip;
+    public static Sound instance;
 
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource soundFXObjectWalk;
+    [SerializeField] private AudioSource soundFXObjectRun;
 
-    private void Start()
+    private bool canPlaySound = true;
+
+    private void Awake()
     {
-        audioSource.clip = WalkingSoundClip;
-        audioSource?.Play();
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
+
+    public void PlaySoundFXClip(AudioClip audioClip, Transform spawnTransform, float volume)
+    {
+        if (!canPlaySound)
+        {
+            return;
+        }
+
+        canPlaySound = false;
+
+        AudioSource audioSource = Instantiate(soundFXObjectWalk, spawnTransform.position, Quaternion.identity);
+        AudioSource _ = Instantiate(soundFXObjectRun, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = audioClip;
+        _.clip = audioClip;
+
+        audioSource.volume = volume;
+        _.volume = volume;
+
+        audioSource.Play();
+        _.Play();
+
+        float clipLength = audioSource.clip.length;
+        float _clipLength = _.clip.length;
+
+
+        Destroy(audioSource.gameObject, clipLength);
+        Destroy(_.gameObject, _clipLength);
+
+        Invoke(nameof(ResetSound), clipLength);
+    }
+
+    private void ResetSound()
+    {
+        canPlaySound = true;
+    }
+
 }

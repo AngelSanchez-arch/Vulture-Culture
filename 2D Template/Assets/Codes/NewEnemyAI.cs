@@ -7,9 +7,13 @@ using Pathfinding;
 using UnityEditor.Rendering;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEngine.Audio;
 
 public partial class NewEnemyAI : MonoBehaviour
 {
+    [SerializeField] private AudioClip WalkingSoundClip;
+    [SerializeField] private AudioClip RunningSoundClip;
+
     public enum States {Roaming, Chasing}
     public States currentState = States.Roaming;
     public Transform target;
@@ -58,6 +62,7 @@ public partial class NewEnemyAI : MonoBehaviour
         if (seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
+            Sound.instance.PlaySoundFXClip(WalkingSoundClip, transform, 1f);
         }
     }
 
@@ -70,6 +75,7 @@ public partial class NewEnemyAI : MonoBehaviour
             enemyPath = p;
             currentWaypoint = 0;
         }
+        
     }
     // Update is called once per frame
     void Update()
@@ -114,6 +120,14 @@ public partial class NewEnemyAI : MonoBehaviour
             }
             currentTargetList.Remove(currentTargetList[0]);
             target = currentTargetList[0].transform;
+        }
+        if (currentState == States.Chasing && playerDistance > 1.6f)
+        {
+            Sound.instance.PlaySoundFXClip(RunningSoundClip, transform, 1f);
+        }
+        if (currentState != States.Chasing && playerDistance > 1.6f)
+        {
+            Sound.instance.PlaySoundFXClip(WalkingSoundClip, transform, 1f);
         }
 
             Vector2 direction = ((Vector2)enemyPath.vectorPath[currentWaypoint] - rb.position).normalized;
