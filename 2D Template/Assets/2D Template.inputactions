@@ -35,11 +35,20 @@
                 {
                     "name": "Reset Camera",
                     "type": "Button",
-                    "id": "ea3fa773-1a9e-4338-abbf-a4c48a4acddd",
+                    "id": "3c846997-e803-4cb2-9ff2-ca6139d18245",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Slide Side then Up",
+                    "type": "Button",
+                    "id": "a862c931-87d5-45af-a182-c03fde0f2223",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -243,12 +252,34 @@
                 },
                 {
                     "name": "",
-                    "id": "92e820fe-dfd5-4446-947a-2cf8ae7b725d",
-                    "path": "<Keyboard>/r",
+                    "id": "e88cb7ec-0e03-4766-ae1f-9c0b4462d1f5",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Reset Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e3842915-f3f2-4ce6-8521-9d39e646e5c0",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Slide Side then Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64a25b1b-ed6e-43a7-923b-7904dc168ece",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Slide Side then Up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

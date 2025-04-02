@@ -2,17 +2,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Timeline;
 
 public class Switch : MonoBehaviour
 {
-    Rigidbody rb;
+    public GameObject wall;
     public bool Ispressed;
-    private GameObject Player;
+    [SerializeField] private Animator Wallanim;
+
     
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Wallanim = wall.GetComponent<Animator>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -20,16 +24,15 @@ public class Switch : MonoBehaviour
     {
 
     }
-    
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // This Causes it to trigger
-       // if (collision.GetComponent<Player>() != null)
-        //{
-            //transform.position = Vector2(1.0f, 1.0f);
-        //}
-        //
+
+    public void OnTriggerEnter2D(Collider2D Collider)
+    {        
+        if (CompareTag("Trap")) //This Causes it to trigger
+        {
+            Debug.Log("yay");
+            Wallanim.enabled = true;
+            //wall.transform.position = Vector2(1.0f, 1.0f);
+        }
     }
-    
-}
+} 
 
