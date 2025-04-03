@@ -42,7 +42,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Slide Side then Up",
+                    "name": "Slide ->",
                     "type": "Button",
                     "id": "a862c931-87d5-45af-a182-c03fde0f2223",
                     "expectedControlType": "",
@@ -268,7 +268,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Slide Side then Up",
+                    "action": "Slide ->",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -279,7 +279,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Slide Side then Up",
+                    "action": "Slide ->",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
