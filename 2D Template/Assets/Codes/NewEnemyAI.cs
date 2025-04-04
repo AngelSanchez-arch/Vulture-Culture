@@ -14,7 +14,7 @@ public partial class NewEnemyAI : MonoBehaviour
     [SerializeField] private AudioClip WalkingSoundClip;
     [SerializeField] private AudioClip RunningSoundClip;
 
-    public enum States {Roaming, Chasing}
+    public enum States {Roaming, Chasing, Attacking}
     public States currentState = States.Roaming;
     public Transform target;
     public GameObject player;
@@ -121,25 +121,42 @@ public partial class NewEnemyAI : MonoBehaviour
             currentTargetList.Remove(currentTargetList[0]);
             target = currentTargetList[0].transform;
         }
-        if (currentState == States.Chasing && playerDistance > 1.6f)
+        if (currentState == States.Chasing && playerDistance > 4f)
         {
+            //Sound.instance.PlaySoundFXClip(RunningSoundClip, transform, 1f);
+        }
+        if (currentState == States.Chasing && playerDistance < 4f)
+        {
+            currentState = States.Attacking;
+        }
+        else if (currentState == States.Attacking && playerDistance >= 6f)
+        {
+            currentState = States.Chasing;
             Sound.instance.PlaySoundFXClip(RunningSoundClip, transform, 1f);
         }
-        if (currentState != States.Chasing && playerDistance > 1.6f)
+        if (currentState != States.Chasing && playerDistance > 4)
         {
             Sound.instance.PlaySoundFXClip(WalkingSoundClip, transform, 1f);
         }
 
+        if (currentState == States.Chasing || currentState == States.Roaming)
+        {
             Vector2 direction = ((Vector2)enemyPath.vectorPath[currentWaypoint] - rb.position).normalized;
         
-        rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, direction * speed, Time.deltaTime * slerp);
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, direction * speed, Time.deltaTime * slerp);
 
-        float distance = Vector2.Distance(rb.position, enemyPath.vectorPath[currentWaypoint]);
+            float distance = Vector2.Distance(rb.position, enemyPath.vectorPath[currentWaypoint]);
 
-        if (distance < leaveDistance)
-        {
-            currentWaypoint++;
+            if (distance < leaveDistance)
+            {
+                currentWaypoint++;
+            }
         }
+        if (currentState == States.Attacking)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+
     }
     public void OnDrawGizmos()
     {
