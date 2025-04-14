@@ -149,7 +149,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5bcc2189ca99846a43a6d79cabe5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkingSoundClip: {fileID: 0}
-  RunningSoundClip: {fileID: 0}
+  WalkingSoundClip: {fileID: 8300000, guid: 4a5dd5e3a75b8fe42984dda1bea4a5a4, type: 3}
+  RunningSoundClip: {fileID: 8300000, guid: 8ad1c0fe1d44e404090d7ac866407e64, type: 3}
   currentState: 0
   target: {fileID: 0}
   player: {fileID: 0}
@@ -211,7 +211,7 @@ MonoBehaviour:
   seeker: {fileID: 2131961723876853848}
   rb: {fileID: 4090871817327670764}
   speed: 14
-  slerp: 0.8
+  slerp: 0.7
   targetDistance: 0
   leaveDistance: 1
   followDistance: 3

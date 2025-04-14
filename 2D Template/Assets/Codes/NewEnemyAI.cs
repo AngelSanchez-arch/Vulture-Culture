@@ -125,7 +125,7 @@ public partial class NewEnemyAI : MonoBehaviour
         {
             //Sound.instance.PlaySoundFXClip(RunningSoundClip, transform, 1f);
         }
-        if (currentState == States.Chasing && playerDistance < 4f)
+        if (currentState == States.Chasing && playerDistance < 6f)
         {
             currentState = States.Attacking;
         }
