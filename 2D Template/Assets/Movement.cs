@@ -2,13 +2,15 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+
 public class Movement : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D rb;
     private Vector2 input;
     private bool isFacingRight = true;
-
+    public ActionMap playerActions;
+    public InputAction sliding;
     private bool canDash = true;
     private bool isSliding;
     private float SlidingPower;
@@ -21,7 +23,27 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
     }
-	internal Vector2 lastPos;
+    private void Awake()
+    {
+        playerActions = new ActionMap();
+    }
+
+    private void OnEnable()
+    {
+        sliding = playerActions.Player.Slide;
+        sliding.Enable();
+        sliding.performed += Dashing;
+        //sliding.performed += Movecamera;
+    }
+
+    private void OnDisable()
+    {
+        sliding.Disable();
+        sliding.performed -= Dashing;
+       
+    }
+
+    internal Vector2 lastPos;
 	// Update is called once per frame
 	void Update()
     {
@@ -38,11 +60,11 @@ public class Movement : MonoBehaviour
         rb.linearVelocity = input * speed;
     }
 
-    private IEnumerable Dash()
+    private IEnumerator Dash()
     {
        canDash = true;
-       isSliding = true;
-       rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower,0f);
+        isSliding = true;
+        transform.position = new Vector2(transform.position.x + 3, transform.position.y);
        tr.emitting = true;
        yield return new WaitForSeconds(SlidingTime);
        tr.emitting = false;
@@ -51,9 +73,15 @@ public class Movement : MonoBehaviour
        canDash = false;
        
     }
-   //ublic void Movecamera(InputAction.CallbackContext ctx)
-  //{
-    //  Vector2 amount = ctx.ReadValue<Vector2>();
+   public void Movecamera(InputAction.CallbackContext ctx)
+   {
+        Debug.Log("you are sliding!");
+      Vector2 amount = ctx.ReadValue<Vector2>();    
+   }
+
+    public void Dashing(InputAction.CallbackContext ctx)
+    {
         
-  //}
+        StartCoroutine(Dash());
+    }
 }

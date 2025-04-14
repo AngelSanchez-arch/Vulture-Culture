@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34939daac2c8a84cb7ff7e2950cbe2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scrollspeed: 0.01
+  Scrollspeed: 0.02
 --- !u!1 &851064633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,12 +1288,12 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 11500000, guid: 8ec08c5db64da5e4e90044affb3c278e, type: 3}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1303,10 +1303,10 @@ MonoBehaviour:
     m_ActionName: 'Player/Reset Camera[/Keyboard/c]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: a06b8696cfa149f4cbe93f668ad3cdde, type: 3}
+      - m_Target: {fileID: 11500000, guid: a9993dee5bb0c974fadc97ed36cd18da, type: 3}
         m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
         m_MethodName: 
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1334,7 +1334,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9993dee5bb0c974fadc97ed36cd18da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 23
+  sliding:
+    m_Name: Sliding
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 441bf212-2985-40a2-9f18-a3ccbdb38100
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
   tr: {fileID: 2129811584}
 --- !u!61 &2129811583
 BoxCollider2D:
