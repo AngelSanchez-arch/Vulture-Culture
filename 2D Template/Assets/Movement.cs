@@ -2,9 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using System;
+using UnityEditor.Tilemaps;
 
 public class Movement : MonoBehaviour
 {
+    public float horizontal;
     public float speed;
     private Rigidbody2D rb;
     private Vector2 input;
@@ -17,7 +20,7 @@ public class Movement : MonoBehaviour
     private float SlidingPower = 5f;
     private float SlidingTime = 0.2f;
     private float SlidingCooldown = 1f;
-    private float SlidingVelocity = 1.3f;
+    //private float SlidingVelocity = 1.3f;
     //private float xDirection;
 
     [SerializeField] private TrailRenderer tr;
@@ -31,48 +34,47 @@ public class Movement : MonoBehaviour
         playerActions = new ActionMap();
     }
 
-    //private void OnEnable()
-    //{
-        //sliding = playerActions.Player.Slide;
-        //sliding.Enable();
-        //sliding.performed += Dashing;
-        //sliding.performed += Movecamera;
-    //}
-
-    //private void OnDisable()
-    //{
-        //sliding.Disable();
-        //sliding.performed -= Dashing;
-       
-    //}
-
     internal Vector2 lastPos;
 	// Update is called once per frame
 	void Update()
     {
+        if (isSliding)
+        {
+            return;
+        }
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize(); //Makes our diagonal movement the same as other movement
         //would be faster w out normalize
-      // if(slide)        
-      // {
-         // if(canSlide)
-         // {
-         //    dashVelocity = 
+        horizontal = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKey(KeyCode.LeftShift) && canSlide)
+        {
+          StartCoroutine(Dash());
+        }
 
-
-
-        //  }
-      // }
+        Flip();
     }
 
     //called once per Physics frame - Used for physics(Used for movement)
     private void FixedUpdate()
     {
+        if (isSliding)
+        {
+            return;
+        }       
         rb.linearVelocity = input * speed;
-       
+        
     }
-
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            Vector2 localScale = transform.localScale;
+            isFacingRight = !isFacingRight;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+    }
     private IEnumerator Dash()
     {
        canSlide = false;
@@ -83,8 +85,8 @@ public class Movement : MonoBehaviour
        tr.emitting = false;
        isSliding = false;
        yield return new WaitForSeconds(SlidingCooldown);
-       canSlide = false;
-       
+       canSlide = true;
+      
     }
    public void Movecamera(InputAction.CallbackContext ctx)
    {
@@ -92,7 +94,7 @@ public class Movement : MonoBehaviour
       Vector2 amount = ctx.ReadValue<Vector2>();    
    }
 
-    public void Dashing(InputAction.CallbackContext ctx)
+    public void Slide(InputAction.CallbackContext ctx)
     {
         StartCoroutine(Dash());
     }

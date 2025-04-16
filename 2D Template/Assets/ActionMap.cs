@@ -64,10 +64,10 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Slide ->"",
-                    ""type"": ""Button"",
+                    ""name"": ""Slide"",
+                    ""type"": ""Value"",
                     ""id"": ""a862c931-87d5-45af-a182-c03fde0f2223"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -286,11 +286,11 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e3842915-f3f2-4ce6-8521-9d39e646e5c0"",
-                    ""path"": ""<Keyboard>/x"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Slide ->"",
+                    ""action"": ""Slide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -301,7 +301,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""Slide ->"",
+                    ""action"": ""Slide"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -893,7 +893,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_ResetCamera = m_Player.FindAction("Reset Camera", throwIfNotFound: true);
-        m_Player_Slide = m_Player.FindAction("Slide ->", throwIfNotFound: true);
+        m_Player_Slide = m_Player.FindAction("Slide", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
