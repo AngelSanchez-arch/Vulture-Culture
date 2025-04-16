@@ -160,7 +160,10 @@ public partial class NewEnemyAI : MonoBehaviour
     }
     public void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(enemyPath.vectorPath[currentWaypoint], 1);
+        if (enemyPath is not null)
+        {
+            Gizmos.DrawWireSphere(enemyPath.vectorPath[currentWaypoint], 1);
+        }
     }
 }
 
