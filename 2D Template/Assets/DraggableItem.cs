@@ -13,6 +13,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -24,5 +25,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        FindObjectOfType<ToggleMask>().currentItemImage = image;   
     }
 }
