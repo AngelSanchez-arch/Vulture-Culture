@@ -13,9 +13,9 @@ namespace UnityStandardAssets.ImageEffects
             Advanced = 1
         }
 
-        public AnimationCurve redChannel = new AnimationCurve(new Keyframe(0f,0f), new Keyframe(1f,1f));
-        public AnimationCurve greenChannel = new AnimationCurve(new Keyframe(0f,0f), new Keyframe(1f,1f));
-        public AnimationCurve blueChannel = new AnimationCurve(new Keyframe(0f,0f), new Keyframe(1f,1f));
+        public AnimationCurve redChannel = new(new Keyframe(0f,0f), new Keyframe(1f,1f));
+        public AnimationCurve greenChannel = new(new Keyframe(0f,0f), new Keyframe(1f,1f));
+        public AnimationCurve blueChannel = new(new Keyframe(0f,0f), new Keyframe(1f,1f));
 
         public bool  useDepthCorrection = false;
 

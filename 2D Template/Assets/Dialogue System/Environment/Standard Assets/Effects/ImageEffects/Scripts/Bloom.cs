@@ -61,10 +61,10 @@ namespace UnityStandardAssets.ImageEffects
         public float lensflareIntensity = 0.0f;
         public float lensflareThreshold = 0.3f;
         public float lensFlareSaturation = 0.75f;
-        public Color flareColorA = new Color (0.4f, 0.4f, 0.8f, 0.75f);
-        public Color flareColorB = new Color (0.4f, 0.8f, 0.8f, 0.75f);
-        public Color flareColorC = new Color (0.8f, 0.4f, 0.8f, 0.75f);
-        public Color flareColorD = new Color (0.8f, 0.4f, 0.0f, 0.75f);
+		public Color flareColorA = new(0.4f, 0.4f, 0.8f, 0.75f);
+        public Color flareColorB = new(0.4f, 0.8f, 0.8f, 0.75f);
+        public Color flareColorC = new(0.8f, 0.4f, 0.8f, 0.75f);
+		public Color flareColorD = new(0.8f, 0.4f, 0.0f, 0.75f);
         public Texture2D lensFlareVignetteMask;
 
         public Shader lensFlareShader;
@@ -94,7 +94,8 @@ namespace UnityStandardAssets.ImageEffects
             return isSupported;
         }
 
-        public void OnRenderImage (RenderTexture source, RenderTexture destination)
+		[Obsolete]
+		public void OnRenderImage (RenderTexture source, RenderTexture destination)
         {
             if (CheckResources()==false)
             {
@@ -178,9 +179,9 @@ namespace UnityStandardAssets.ImageEffects
                         Graphics.Blit (secondQuarterRezColor, quarterRezColor);
                     }
                     else
-                    {
-                        quarterRezColor.MarkRestoreExpected(); // using max blending, RT restore expected
-                        Graphics.Blit (secondQuarterRezColor, quarterRezColor, screenBlend, 10);
+					{
+						quarterRezColor.MarkRestoreExpected(); // using max blending, RT restore expected
+						Graphics.Blit (secondQuarterRezColor, quarterRezColor, screenBlend, 10);
                     }
                 }
             }
@@ -234,10 +235,10 @@ namespace UnityStandardAssets.ImageEffects
 
                     float stretchWidth = (hollyStretchWidth * 1.0f / widthOverHeight) * oneOverBaseSize;
 
-                    blurAndFlaresMaterial.SetVector ("_Offsets", new Vector4 (flareXRot, flareyRot, 0.0f, 0.0f));
+					blurAndFlaresMaterial.SetVector("_Offsets", new Vector4(flareXRot, flareyRot, 0.0f, 0.0f));
                     blurAndFlaresMaterial.SetVector ("_Threshhold", new Vector4 (lensflareThreshold, 1.0f, 0.0f, 0.0f));
-                    blurAndFlaresMaterial.SetVector ("_TintColor", new Vector4 (flareColorA.r, flareColorA.g, flareColorA.b, flareColorA.a) * flareColorA.a * lensflareIntensity);
-                    blurAndFlaresMaterial.SetFloat ("_Saturation", lensFlareSaturation);
+					blurAndFlaresMaterial.SetVector("_TintColor", flareColorA.a * lensflareIntensity * new Vector4(flareColorA.r, flareColorA.g, flareColorA.b, flareColorA.a));
+					blurAndFlaresMaterial.SetFloat("_Saturation", lensFlareSaturation);
 
                     // "pre and cut"
                     quarterRezColor.DiscardContents();
@@ -310,14 +311,16 @@ namespace UnityStandardAssets.ImageEffects
             RenderTexture.ReleaseTemporary (secondQuarterRezColor);
         }
 
-        private void AddTo (float intensity_, RenderTexture from, RenderTexture to)
+		[Obsolete]
+		private void AddTo (float intensity_, RenderTexture from, RenderTexture to)
         {
-            screenBlend.SetFloat ("_Intensity", intensity_);
-            to.MarkRestoreExpected(); // additive blending, RT restore expected
-            Graphics.Blit (from, to, screenBlend, 9);
+			screenBlend.SetFloat("_Intensity", intensity_);
+			to.MarkRestoreExpected(); // additive blending, RT restore expected
+			Graphics.Blit (from, to, screenBlend, 9);
         }
 
-        private void BlendFlares (RenderTexture from, RenderTexture to)
+		[Obsolete]
+		private void BlendFlares (RenderTexture from, RenderTexture to)
         {
             lensFlareMaterial.SetVector ("colorA", new Vector4 (flareColorA.r, flareColorA.g, flareColorA.b, flareColorA.a) * lensflareIntensity);
             lensFlareMaterial.SetVector ("colorB", new Vector4 (flareColorB.r, flareColorB.g, flareColorB.b, flareColorB.a) * lensflareIntensity);
@@ -339,7 +342,8 @@ namespace UnityStandardAssets.ImageEffects
             Graphics.Blit (from, to, brightPassFilterMaterial, 1);
         }
 
-        private void Vignette (float amount, RenderTexture from, RenderTexture to)
+		[Obsolete]
+		private void Vignette (float amount, RenderTexture from, RenderTexture to)
         {
             if (lensFlareVignetteMask)
             {
