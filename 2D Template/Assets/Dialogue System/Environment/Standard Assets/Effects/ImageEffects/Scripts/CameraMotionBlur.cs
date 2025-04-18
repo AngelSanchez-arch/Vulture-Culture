@@ -8,8 +8,8 @@ namespace UnityStandardAssets.ImageEffects
     [AddComponentMenu ("Image Effects/Camera/Camera Motion Blur") ]
     public class CameraMotionBlur : PostEffectsBase
     {
-        // make sure to match this to MAX_RADIUS in shader ('k' in paper)
-        static float MAX_RADIUS = 10.0f;
+		// make sure to match this to MAX_RADIUS in shader ('k' in paper)
+		private static float MAX_RADIUS = 10.0f;
 
         public enum MotionBlurFilter {
             CameraMotion = 0,			// global screen blur based on cam motion
@@ -131,32 +131,34 @@ namespace UnityStandardAssets.ImageEffects
             // use if possible new RG format ... fallback to half otherwise
             var rtFormat= SystemInfo.SupportsRenderTextureFormat (RenderTextureFormat.RGHalf) ? RenderTextureFormat.RGHalf : RenderTextureFormat.ARGBHalf;
 
-            // get temp textures
-            RenderTexture velBuffer = RenderTexture.GetTemporary (divRoundUp (source.width, velocityDownsample), divRoundUp (source.height, velocityDownsample), 0, rtFormat);
-            int tileWidth = 1;
-            int tileHeight = 1;
-            maxVelocity = Mathf.Max (2.0f, maxVelocity);
+			// get temp textures
+			RenderTexture velBuffer = RenderTexture.GetTemporary(divRoundUp(source.width, velocityDownsample), divRoundUp(source.height, velocityDownsample), 0, rtFormat);
+			maxVelocity = Mathf.Max(2.0f, maxVelocity);
 
-            float _maxVelocity = maxVelocity; // calculate 'k'
-            // note: 's' is hardcoded in shaders except for DX11 path
+			// note: 's' is hardcoded in shaders except for DX11 path
 
-            // auto DX11 fallback!
-            bool fallbackFromDX11 = filterType == MotionBlurFilter.ReconstructionDX11 && dx11MotionBlurMaterial == null;
+			// auto DX11 fallback!
+			bool fallbackFromDX11 = filterType == MotionBlurFilter.ReconstructionDX11 && dx11MotionBlurMaterial == null;
 
-            if (filterType == MotionBlurFilter.Reconstruction || fallbackFromDX11 || filterType == MotionBlurFilter.ReconstructionDisc) {
-                maxVelocity = Mathf.Min (maxVelocity, MAX_RADIUS);
-                tileWidth = divRoundUp (velBuffer.width, (int) maxVelocity);
-                tileHeight = divRoundUp (velBuffer.height, (int) maxVelocity);
-                _maxVelocity = velBuffer.width/tileWidth;
-            }
-            else {
-                tileWidth = divRoundUp (velBuffer.width, (int) maxVelocity);
-                tileHeight = divRoundUp (velBuffer.height, (int) maxVelocity);
-                _maxVelocity = velBuffer.width/tileWidth;
-            }
+			int tileHeight;
 
-            RenderTexture tileMax  = RenderTexture.GetTemporary (tileWidth, tileHeight, 0, rtFormat);
-            RenderTexture neighbourMax  = RenderTexture.GetTemporary (tileWidth, tileHeight, 0, rtFormat);
+			float _maxVelocity;
+			if (filterType == MotionBlurFilter.Reconstruction || fallbackFromDX11 || filterType == MotionBlurFilter.ReconstructionDisc)
+			{
+				maxVelocity = Mathf.Min(maxVelocity, MAX_RADIUS);
+				_ = divRoundUp(velBuffer.width, (int)maxVelocity);
+				tileHeight = divRoundUp(velBuffer.height, (int)maxVelocity);
+				_maxVelocity = velBuffer.width / 1;
+			}
+			else
+			{
+				_ = divRoundUp(velBuffer.width, (int)maxVelocity);
+				tileHeight = divRoundUp(velBuffer.height, (int)maxVelocity);
+				_maxVelocity = velBuffer.width / 1;
+			}
+
+			RenderTexture tileMax  = RenderTexture.GetTemporary (1, tileHeight, 0, rtFormat);
+            RenderTexture neighbourMax  = RenderTexture.GetTemporary (1, tileHeight, 0, rtFormat);
             velBuffer.filterMode = FilterMode.Point;
             tileMax.filterMode = FilterMode.Point;
             neighbourMax.filterMode = FilterMode.Point;
