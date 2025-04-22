@@ -1194,7 +1194,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1816606892, guid: edbece4bf3eaf8f41b3682aef21f948d, type: 3}
+  m_Sprite: {fileID: 746912004, guid: edbece4bf3eaf8f41b3682aef21f948d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1383,7 +1383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontal: 0
-  speed: 5
+  speed: 3
   sliding:
     m_Name: Sliding
     m_Type: 0
