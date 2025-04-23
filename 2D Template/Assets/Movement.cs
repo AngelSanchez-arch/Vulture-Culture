@@ -8,6 +8,7 @@ using UnityEditor;
 
 public class Movement : MonoBehaviour
 {
+    public Animator animator;
     public float horizontal;
     public float speed;
     private Rigidbody2D rb;
@@ -43,10 +44,12 @@ public class Movement : MonoBehaviour
         {
             return;
         }
+        horizontal = Input.GetAxisRaw("Horizontal") * speed;
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize(); //Makes our diagonal movement the same as other movement
         //would be faster w out normalize
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
         horizontal = Input.GetAxisRaw("Horizontal");
         if (Input.GetKey(KeyCode.LeftShift) && canSlide)
         {

@@ -227,7 +227,7 @@ Transform:
   m_GameObject: {fileID: 37082937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0.51, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -705,7 +705,7 @@ Transform:
   m_GameObject: {fileID: 1300243055}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1298828, y: 0.51000214, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1214,7 +1214,7 @@ Transform:
   m_GameObject: {fileID: 2129811575}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: 0.51, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1382,7 +1382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9993dee5bb0c974fadc97ed36cd18da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
+  animator: {fileID: 2129811585}
+  horizontal: 3
   speed: 3
   sliding:
     m_Name: Sliding
