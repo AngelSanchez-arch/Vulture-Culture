@@ -2,11 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEditor;
+using Unity.VisualScripting;
 public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Image image;
     [HideInInspector] public Transform parentAfterDrag;
-
+    public Masks currentMask;
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
@@ -25,6 +26,10 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
-        FindObjectOfType<ToggleMask>().currentItemImage = image;   
+
+        
+      // Right now it sets the player sprite and animation regardless if wether or not the item is parented to the inventory slot. Simple fix I just can't get. Find object to work so that it only switches once its parented
+            FindAnyObjectByType<ToggleMask>().gameObject.GetComponentInChildren<SpriteRenderer>().sprite = image.sprite;
+            FindAnyObjectByType<ToggleMask>().gameObject.GetComponent<Animator>().runtimeAnimatorController = currentMask.playerAnimator;
     }
 }
