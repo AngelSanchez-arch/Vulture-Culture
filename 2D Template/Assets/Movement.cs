@@ -9,6 +9,7 @@ using UnityEditor;
 public class Movement : MonoBehaviour
 {
     public Animator animator;
+    public float vertical;
     public float horizontal;
     public float speed;
     private Rigidbody2D rb;
@@ -18,12 +19,11 @@ public class Movement : MonoBehaviour
     public InputAction sliding;
     private bool canSlide = true;
     bool slide;
-    private bool isSliding;
+    private bool IsSliding;
     private float SlidingPower = 5f;
     private float SlidingTime = 0.2f;
     private float SlidingCooldown = 1f;
-    //private float SlidingVelocity = 1.3f;
-    //private float xDirection;
+    
 
     [SerializeField] private TrailRenderer tr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,16 +40,23 @@ public class Movement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-        if (isSliding)
+        if (IsSliding)
         {
-            return;
+            IsSliding = true;
         }
+        if (IsSliding == true)
+        {
+            animator = GetComponent<Animator>();
+            Debug.Log(animator);
+        } 
         horizontal = Input.GetAxisRaw("Horizontal") * speed;
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize(); //Makes our diagonal movement the same as other movement
         //would be faster w out normalize
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
+      
+       
         horizontal = Input.GetAxisRaw("Horizontal");
         if (Input.GetKey(KeyCode.LeftShift) && canSlide)
         {
@@ -62,7 +69,7 @@ public class Movement : MonoBehaviour
     //called once per Physics frame - Used for physics(Used for movement)
     private void FixedUpdate()
     {
-        if (isSliding)
+        if (IsSliding)
         {
             return;
         }       
@@ -81,14 +88,19 @@ public class Movement : MonoBehaviour
     }
     private IEnumerator Dash()
     {
-       canSlide = false;
-       isSliding = true;
-       rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection
+       
+        canSlide = false;
+       IsSliding = true;
+        animator.SetBool("IsSliding", true);
+        Debug.Log(animator.GetFloat("Speed"));
+        rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection
        tr.emitting = true;
        yield return new WaitForSeconds(SlidingTime);
        tr.emitting = false;
-       isSliding = false;
-       yield return new WaitForSeconds(SlidingCooldown);
+       IsSliding = false;
+        animator.SetBool("IsSliding", false);
+        Debug.Log(animator.GetFloat("Speed"));
+        yield return new WaitForSeconds(SlidingCooldown);
        canSlide = true;
       
     }
