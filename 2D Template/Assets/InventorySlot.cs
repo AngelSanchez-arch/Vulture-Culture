@@ -7,7 +7,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public bool _isMainSlot;
 
-
     public void OnDrop(PointerEventData eventData)
     {
         ToggleMask toggleMask = FindFirstObjectByType<ToggleMask>();
