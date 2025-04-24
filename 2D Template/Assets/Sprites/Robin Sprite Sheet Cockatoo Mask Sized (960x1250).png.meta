@@ -94,7 +94,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -132,7 +132,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -186,10 +186,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1124
-        width: 55
-        height: 126
+        x: 19
+        y: 1125
+        width: 53
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,10 +208,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_1
       rect:
         serializedVersion: 2
-        x: 108
-        y: 1127
-        width: 75
-        height: 120
+        x: 109
+        y: 1128
+        width: 73
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +230,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_2
       rect:
         serializedVersion: 2
-        x: 208
-        y: 1127
-        width: 61
-        height: 123
+        x: 209
+        y: 1128
+        width: 59
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_3
       rect:
         serializedVersion: 2
-        x: 297
-        y: 1127
-        width: 75
-        height: 120
+        x: 298
+        y: 1128
+        width: 73
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,10 +274,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_4
       rect:
         serializedVersion: 2
-        x: 18
-        y: 1002
-        width: 55
-        height: 123
+        x: 19
+        y: 1003
+        width: 53
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +296,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_5
       rect:
         serializedVersion: 2
-        x: 109
-        y: 878
-        width: 73
-        height: 124
+        x: 115
+        y: 1003
+        width: 67
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_6
       rect:
         serializedVersion: 2
-        x: 114
-        y: 1002
-        width: 69
-        height: 124
+        x: 213
+        y: 1003
+        width: 55
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -340,10 +340,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_7
       rect:
         serializedVersion: 2
-        x: 212
-        y: 1002
-        width: 57
-        height: 123
+        x: 309
+        y: 1003
+        width: 67
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,10 +362,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_8
       rect:
         serializedVersion: 2
-        x: 306
-        y: 878
-        width: 73
-        height: 124
+        x: 19
+        y: 877
+        width: 52
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_9
       rect:
         serializedVersion: 2
-        x: 308
-        y: 1002
-        width: 69
-        height: 124
+        x: 110
+        y: 879
+        width: 71
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -406,10 +406,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_10
       rect:
         serializedVersion: 2
-        x: 18
+        x: 213
         y: 876
-        width: 54
-        height: 125
+        width: 55
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -428,10 +428,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_11
       rect:
         serializedVersion: 2
-        x: 114
-        y: 752
-        width: 69
-        height: 124
+        x: 307
+        y: 879
+        width: 71
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,10 +450,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_12
       rect:
         serializedVersion: 2
-        x: 212
-        y: 875
-        width: 57
-        height: 126
+        x: 19
+        y: 753
+        width: 53
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,10 +472,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_13
       rect:
         serializedVersion: 2
-        x: 304
-        y: 752
-        width: 69
-        height: 124
+        x: 115
+        y: 753
+        width: 67
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -494,10 +494,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_14
       rect:
         serializedVersion: 2
-        x: 18
-        y: 752
+        x: 213
+        y: 753
         width: 55
-        height: 123
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_15
       rect:
         serializedVersion: 2
-        x: 111
-        y: 628
-        width: 73
-        height: 124
+        x: 305
+        y: 753
+        width: 67
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -538,9 +538,9 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_16
       rect:
         serializedVersion: 2
-        x: 212
-        y: 752
-        width: 57
+        x: 18
+        y: 627
+        width: 54
         height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -560,10 +560,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_17
       rect:
         serializedVersion: 2
-        x: 302
-        y: 628
-        width: 73
-        height: 124
+        x: 112
+        y: 629
+        width: 71
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -582,10 +582,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_18
       rect:
         serializedVersion: 2
-        x: 17
-        y: 626
-        width: 56
-        height: 125
+        x: 213
+        y: 625
+        width: 55
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -604,10 +604,10 @@ TextureImporter:
       name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_19
       rect:
         serializedVersion: 2
-        x: 212
-        y: 624
-        width: 57
-        height: 126
+        x: 303
+        y: 629
+        width: 71
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -626,7 +626,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 27f020f601f67774282b8d27c6eecb13
     internalID: 0
     vertices: []
     indices: 
@@ -635,7 +635,27 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_0: 3820658761404087088
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_1: -4575692368169479797
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_10: -2531249723431909347
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_11: -129791493575705571
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_12: 3980088082728412027
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_13: -7879388977041428424
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_14: -7212944290351701244
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_15: 7953650380656266606
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_16: -5140722888126578327
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_17: -1372544485570405691
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_18: -7288411716901452345
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_19: -7137795957378993816
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_2: -4448731681023642574
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_3: 5868358757553628560
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_4: -6937020051245403067
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_5: -3655432070151736558
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_6: -2358801976812612594
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_7: -65089271869968587
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_8: 7497541145034146631
+      Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_9: 6338528525700243761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
