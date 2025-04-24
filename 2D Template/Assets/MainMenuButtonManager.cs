@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MainMenuButtomManger : MonoBehaviour
+public class MainMenuButtonManager : MonoBehaviour
 {
 	[SerializeField] MainMenuManager.MainMenuButtons _buttonType;
 	public void ButtonClicked() 

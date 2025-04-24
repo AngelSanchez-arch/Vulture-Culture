@@ -20,10 +20,6 @@ MonoBehaviour:
     rid: 8479365928926838882
   m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 0
-    m_path: Assets/Scenes/Level 1.unity
-  - m_enabled: 1
-    m_path: Assets/Scenes/Main menu.unity
   - m_enabled: 1
     m_path: Assets/Scenes/AITest.unity
   m_ScriptingDefines: []
