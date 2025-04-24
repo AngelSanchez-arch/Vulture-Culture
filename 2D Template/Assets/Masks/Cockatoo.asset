@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02d97be2201d74849b9487cb05f3631f, type: 3}
-  m_Name: Bird Mask
+  m_Name: Cockatoo
   m_EditorClassIdentifier: 
   Mask: {fileID: 0}
   MaskName: 
-  playerAnimator: {fileID: 9100000, guid: a5a8956caa7934a4eb915dd3f7bc25d5, type: 2}
+  playerAnimator: {fileID: 9100000, guid: de13549f0967fc74a81f708aff8347ed, type: 2}

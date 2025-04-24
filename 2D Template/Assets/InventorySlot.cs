@@ -5,11 +5,12 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-
-
+    public bool _isMainSlot;
 
     public void OnDrop(PointerEventData eventData)
     {
+        ToggleMask toggleMask = FindFirstObjectByType<ToggleMask>();
+
         GameObject dropped = eventData.pointerDrag;
         DraggableItem draggableItem = dropped.GetComponent<DraggableItem>();
 
@@ -19,18 +20,29 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
             oldChild.SetParent(draggableItem.parentAfterDrag);
             oldChild.SetAsLastSibling();
-            oldChild.GetComponent<DraggableItem>().parentAfterDrag = draggableItem.parentAfterDrag;
 
-            FindAnyObjectByType<ToggleMask>().gameObject.GetComponentInChildren<SpriteRenderer>().sprite = oldChild.GetComponent<DraggableItem>().image.sprite;
+            DraggableItem oldDraggable = oldChild.GetComponent<DraggableItem>();
+            oldDraggable.parentAfterDrag = draggableItem.parentAfterDrag;
 
-            if (oldChild.GetComponent<DraggableItem>().currentMask)
+            if (toggleMask && draggableItem.parentAfterDrag.GetComponent<InventorySlot>()._isMainSlot)
             {
-                FindAnyObjectByType<ToggleMask>().gameObject.GetComponent<Animator>().runtimeAnimatorController = oldChild.GetComponent<DraggableItem>().currentMask.playerAnimator;
+                toggleMask.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = oldDraggable.image.sprite;
+
+                if (oldDraggable.currentMask)
+                {
+                    toggleMask.gameObject.GetComponent<Animator>().runtimeAnimatorController = oldDraggable.currentMask.playerAnimator;
+                }
             }
         }
 
         draggableItem.transform.SetParent(transform);
         draggableItem.transform.SetAsLastSibling();
         draggableItem.parentAfterDrag = transform;
+
+        if (_isMainSlot && toggleMask)
+        {
+            toggleMask.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = draggableItem.image.sprite;
+            toggleMask.gameObject.GetComponent<Animator>().runtimeAnimatorController = draggableItem.currentMask.playerAnimator;
+        }
     }
 }
