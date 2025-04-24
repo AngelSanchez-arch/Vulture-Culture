@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: c0f9d46c631a1c3439017bf4a2d9614b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -844365270504231343
+    second: Robin Woodpecker Sprite Sheet_0
+  - first:
+      213: -247148373176852004
+    second: Robin Woodpecker Sprite Sheet_1
+  - first:
+      213: 1917576217570352852
+    second: Robin Woodpecker Sprite Sheet_2
+  - first:
+      213: -5742640882944329368
+    second: Robin Woodpecker Sprite Sheet_3
+  - first:
+      213: -5515506132821363696
+    second: Robin Woodpecker Sprite Sheet_4
+  - first:
+      213: 6247083608247607931
+    second: Robin Woodpecker Sprite Sheet_5
+  - first:
+      213: 3201981288130928062
+    second: Robin Woodpecker Sprite Sheet_6
+  - first:
+      213: -1155930221519618710
+    second: Robin Woodpecker Sprite Sheet_7
+  - first:
+      213: 6765640951661654088
+    second: Robin Woodpecker Sprite Sheet_8
+  - first:
+      213: -3339173883107910884
+    second: Robin Woodpecker Sprite Sheet_9
+  - first:
+      213: -8042096212167087547
+    second: Robin Woodpecker Sprite Sheet_10
+  - first:
+      213: -7336279773167198394
+    second: Robin Woodpecker Sprite Sheet_11
+  - first:
+      213: -3354515911542256858
+    second: Robin Woodpecker Sprite Sheet_12
+  - first:
+      213: 3106342589617821839
+    second: Robin Woodpecker Sprite Sheet_13
+  - first:
+      213: -968141204107678193
+    second: Robin Woodpecker Sprite Sheet_14
+  - first:
+      213: 2717838780057470239
+    second: Robin Woodpecker Sprite Sheet_15
+  - first:
+      213: -3943862615146247876
+    second: Robin Woodpecker Sprite Sheet_16
+  - first:
+      213: 8611985967108062905
+    second: Robin Woodpecker Sprite Sheet_17
+  - first:
+      213: -1873648867424935790
+    second: Robin Woodpecker Sprite Sheet_18
+  - first:
+      213: -8245374190215260087
+    second: Robin Woodpecker Sprite Sheet_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 863
+        width: 55
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15e2be692463844f0800000000000000
+      internalID: -844365270504231343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 866
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd16af13dd3f19cf0800000000000000
+      internalID: -247148373176852004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 866
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4de940ef8699c9a10800000000000000
+      internalID: 1917576217570352852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 866
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 869b773fa8a0e40b0800000000000000
+      internalID: -5742640882944329368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 770
+        width: 55
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014b1b4056cf473b0800000000000000
+      internalID: -5515506132821363696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 767
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72a3c7717912b650800000000000000
+      internalID: 6247083608247607931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 772
+        width: 57
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebddd784409bf6c20800000000000000
+      internalID: 3201981288130928062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 767
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d3f21869f45ffe0800000000000000
+      internalID: -1155930221519618710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 673
+        width: 54
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840f0a1899264ed50800000000000000
+      internalID: 6765640951661654088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 580
+        width: 55
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b57168b0fd8a1d0800000000000000
+      internalID: -3339173883107910884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 672
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a24489a1cb46090800000000000000
+      internalID: -8042096212167087547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 674
+        width: 57
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f5c736a6c403a90800000000000000
+      internalID: -7336279773167198394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 671
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bc02b2d8d5271d0800000000000000
+      internalID: -3354515911542256858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 576
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8856dc8022fb1b20800000000000000
+      internalID: 3106342589617821839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 580
+        width: 57
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e2ebc44b87092f0800000000000000
+      internalID: -968141204107678193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 575
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f154b1288f3b7b520800000000000000
+      internalID: 2717838780057470239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 483
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39c345d8d59449c0800000000000000
+      internalID: -3943862615146247876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 481
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9beff1cdb9be38770800000000000000
+      internalID: 8611985967108062905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 482
+        width: 57
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290e25738467ff5e0800000000000000
+      internalID: -1873648867424935790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Woodpecker Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 480
+        width: 92
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9489b002cdb829d80800000000000000
+      internalID: -8245374190215260087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

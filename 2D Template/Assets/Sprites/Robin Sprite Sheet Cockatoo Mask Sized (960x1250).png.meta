@@ -1,0 +1,643 @@
+fileFormatVersion: 2
+guid: 0eb431bca704d844b9426010a68b5d5d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3820658761404087088
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_0
+  - first:
+      213: -4575692368169479797
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_1
+  - first:
+      213: -4448731681023642574
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_2
+  - first:
+      213: 5868358757553628560
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_3
+  - first:
+      213: -6937020051245403067
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_4
+  - first:
+      213: -3655432070151736558
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_5
+  - first:
+      213: -2358801976812612594
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_6
+  - first:
+      213: -65089271869968587
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_7
+  - first:
+      213: 7497541145034146631
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_8
+  - first:
+      213: 6338528525700243761
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_9
+  - first:
+      213: -2531249723431909347
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_10
+  - first:
+      213: -129791493575705571
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_11
+  - first:
+      213: 3980088082728412027
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_12
+  - first:
+      213: -7879388977041428424
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_13
+  - first:
+      213: -7212944290351701244
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_14
+  - first:
+      213: 7953650380656266606
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_15
+  - first:
+      213: -5140722888126578327
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_16
+  - first:
+      213: -1372544485570405691
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_17
+  - first:
+      213: -7288411716901452345
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_18
+  - first:
+      213: -7137795957378993816
+    second: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1124
+        width: 55
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b797996e4b50530800000000000000
+      internalID: 3820658761404087088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_1
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1127
+        width: 75
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81dac1c800ef70c0800000000000000
+      internalID: -4575692368169479797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 1127
+        width: 61
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2343f834b1ee242c0800000000000000
+      internalID: -4448731681023642574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_3
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1127
+        width: 75
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0956986b239907150800000000000000
+      internalID: 5868358757553628560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 1002
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54471cd6401cabf90800000000000000
+      internalID: -6937020051245403067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_5
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 878
+        width: 73
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213f80646eb454dc0800000000000000
+      internalID: -3655432070151736558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1002
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e04589c791ad34fd0800000000000000
+      internalID: -2358801976812612594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_7
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1002
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53f608fe6a1c81ff0800000000000000
+      internalID: -65089271869968587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_8
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 878
+        width: 73
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 743c2ae92fd9c0860800000000000000
+      internalID: 7497541145034146631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_9
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1002
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1312b057c1af6f750800000000000000
+      internalID: 6338528525700243761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_10
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 876
+        width: 54
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d180905a9c13fdcd0800000000000000
+      internalID: -2531249723431909347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 752
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c7d820353e23ef0800000000000000
+      internalID: -129791493575705571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_12
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 875
+        width: 57
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73eac9160d1c3730800000000000000
+      internalID: 3980088082728412027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_13
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 752
+        width: 69
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8303150e879c6a290800000000000000
+      internalID: -7879388977041428424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 752
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 403a7ec326976eb90800000000000000
+      internalID: -7212944290351701244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_15
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 628
+        width: 73
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dcaa681ea016e60800000000000000
+      internalID: 7953650380656266606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_16
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 752
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961ce7c15cb78a8b0800000000000000
+      internalID: -5140722888126578327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_17
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 628
+        width: 73
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca972bff0eb3fce0800000000000000
+      internalID: -1372544485570405691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 626
+        width: 56
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c54b4db82c5ada90800000000000000
+      internalID: -7288411716901452345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robin Sprite Sheet Cockatoo Mask Sized (960x1250)_19
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 624
+        width: 57
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 861b439f46471fc90800000000000000
+      internalID: -7137795957378993816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
