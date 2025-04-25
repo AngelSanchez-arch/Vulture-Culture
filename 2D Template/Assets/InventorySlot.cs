@@ -24,6 +24,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             DraggableItem oldDraggable = oldChild.GetComponent<DraggableItem>();
             oldDraggable.parentAfterDrag = draggableItem.parentAfterDrag;
 
+            oldDraggable.GetComponent<MaskAbilities>().enabled = false;
+
             if (toggleMask && draggableItem.parentAfterDrag.GetComponent<InventorySlot>()._isMainSlot)
             {
                 toggleMask.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = oldDraggable.image.sprite;
@@ -31,6 +33,8 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 if (oldDraggable.currentMask)
                 {
                     toggleMask.gameObject.GetComponent<Animator>().runtimeAnimatorController = oldDraggable.currentMask.playerAnimator;
+                    oldDraggable.GetComponent<MaskAbilities>().enabled = true;
+
                 }
             }
         }
@@ -43,6 +47,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         {
             toggleMask.gameObject.GetComponentInChildren<SpriteRenderer>().sprite = draggableItem.image.sprite;
             toggleMask.gameObject.GetComponent<Animator>().runtimeAnimatorController = draggableItem.currentMask.playerAnimator;
+
+            draggableItem.GetComponent<MaskAbilities>().enabled = true;
+        }
+        else
+        {
+            draggableItem.GetComponent<MaskAbilities>().enabled = false;
         }
     }
 }
