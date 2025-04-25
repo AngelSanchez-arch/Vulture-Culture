@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     public InputAction sliding;
     private bool canSlide = true;
     bool slide;
+    private bool DownFacing = true; 
     private bool IsSliding;
     private float SlidingPower = 5f;
     private float SlidingTime = 0.2f;
@@ -52,11 +53,15 @@ public class Movement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal") * speed;
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
+        vertical = Input.GetAxisRaw("Vertical") * speed;
+        
+
         input.Normalize(); //Makes our diagonal movement the same as other movement
         //would be faster w out normalize
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
-      
-       
+        animator.SetFloat("Speed", Mathf.Abs(vertical));
+
+        vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
         if (Input.GetKey(KeyCode.LeftShift) && canSlide)
         {
