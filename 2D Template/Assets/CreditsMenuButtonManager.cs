@@ -1,16 +1,10 @@
 using UnityEngine;
 
-public class CreditsMenuButton : MonoBehaviour
+public class CreditsMenuButtonManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] MainMenuManager.CreditsButtons _buttonType;
+    public void ButtonClicked() 
+    { 
+        MainMenuManager._.CreditsButtonClicked(_buttonType);
+	}
 }
