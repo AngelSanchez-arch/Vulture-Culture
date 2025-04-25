@@ -51,7 +51,7 @@ public class MainMenuManager : MonoBehaviour
 	}
 	public void CreditsClicked() 
 	{
-		OpenMenu(_MainMenuContainer);
+		OpenMenu(_CreditsMenuContainer);
 	}
 	public void OptionsClicked()
 	{

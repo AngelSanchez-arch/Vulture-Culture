@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour
+public class Enemy_Health : MonoBehaviour
 {
     private PlayerHealth playerHealth;
     public int damage = 2;
@@ -28,7 +28,7 @@ public class EnemyDamage : MonoBehaviour
 		}
     }
 
-	internal void TakeDamage(int attackDamage)
+	internal void ChangeHealth(object value)
 	{
 		throw new NotImplementedException();
 	}
