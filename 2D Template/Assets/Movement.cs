@@ -24,7 +24,7 @@ public class Movement : MonoBehaviour
     private float SlidingPower = 5f;
     private float SlidingTime = 0.2f;
     private float SlidingCooldown = 1f;
-    
+    private Vector2 LastDirection;
 
     [SerializeField] private TrailRenderer tr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -47,19 +47,36 @@ public class Movement : MonoBehaviour
         }
         if (IsSliding == true)
         {
+           
             animator = GetComponent<Animator>();
             Debug.Log(animator);
         } 
         horizontal = Input.GetAxisRaw("Horizontal") * speed;
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-        vertical = Input.GetAxisRaw("Vertical") * speed;
+        
+        if (input!=Vector2.zero)
+        {
+            LastDirection = input;
+        }
         
 
+        vertical = Input.GetAxisRaw("Vertical") * speed;
+
+        DownFacing = LastDirection.y<0;
+        animator.SetBool("DownFacing", DownFacing);
+
+
+        if (DownFacing == true)
+        {
+            
+            animator = GetComponent<Animator>();
+            Debug.Log(animator);
+        }
         input.Normalize(); //Makes our diagonal movement the same as other movement
         //would be faster w out normalize
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
-        animator.SetFloat("Speed", Mathf.Abs(vertical));
+        animator.SetFloat("Speed", input.magnitude * speed);
+       
 
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");

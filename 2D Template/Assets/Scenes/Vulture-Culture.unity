@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2129811585}
-  vertical: 0
+  vertical: 3
   horizontal: 3
   speed: 3
   sliding:
@@ -1715,11 +1715,11 @@ PrefabInstance:
       objectReference: {fileID: 1841950721}
     - target: {fileID: 6225690271556252831, guid: f9f6732274302fb4b84fbdb9c6b8f77d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.41
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 6225690271556252831, guid: f9f6732274302fb4b84fbdb9c6b8f77d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.54
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: 6225690271556252831, guid: f9f6732274302fb4b84fbdb9c6b8f77d, type: 3}
       propertyPath: m_LocalPosition.z
