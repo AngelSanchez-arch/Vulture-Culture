@@ -24,6 +24,6 @@ public class KnockbackFeedback : MonoBehaviour
     {
 		yield return new WaitForSeconds(delay);
 		rb2d.linearVelocity = Vector2.zero;
-        OnDone?.Invoke();
+		OnDone?.Invoke();
 	}
 }

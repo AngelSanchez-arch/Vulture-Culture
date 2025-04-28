@@ -22,7 +22,13 @@ public class Enemy_Combat : MonoBehaviour
 
 
 	public void Attack() 
-	{ 
+	{
+		Collider2D[] hits = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerLayer);
+		if (hits.Length > 0) 
+		{ 
+			hits[0].GetComponent<PlayerHealth>().ChangeHealth(-damage);
+
+		}
 	
 	}
 }

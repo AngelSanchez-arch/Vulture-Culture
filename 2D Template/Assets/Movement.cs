@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     private Vector2 input;
+    private bool UpFacing = true;
     private bool isFacingRight = true;
     public ActionMap playerActions;
     public InputAction sliding;
@@ -65,11 +66,17 @@ public class Movement : MonoBehaviour
 
         DownFacing = LastDirection.y<0;
         animator.SetBool("DownFacing", DownFacing);
-
-
+        UpFacing = LastDirection.y>0;
+        animator.SetBool("UpFacing", UpFacing);
         if (DownFacing == true)
         {
             
+            animator = GetComponent<Animator>();
+            Debug.Log(animator);
+        }
+        if (UpFacing == true)
+        {
+
             animator = GetComponent<Animator>();
             Debug.Log(animator);
         }
