@@ -30,6 +30,6 @@ public class EnemyDamage : MonoBehaviour
 
 	internal void TakeDamage(int attackDamage)
 	{
-		throw new NotImplementedException();
+		
 	}
 }

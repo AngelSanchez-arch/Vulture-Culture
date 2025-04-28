@@ -40,7 +40,7 @@ public class PlayerCombat : MonoBehaviour
 		foreach(Collider2D enemy in enemies) 
 		{
 			int damage = 0;
-			enemies[0].GetComponent<Enemy_Health>().ChangeHealth(-damage);
+			enemies[0].GetComponent<EnemyDamage>().TakeDamage(-damage);
 			enemies[0].GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce);
 		}
 	}

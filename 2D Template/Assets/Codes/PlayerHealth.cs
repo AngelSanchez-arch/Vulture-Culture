@@ -12,11 +12,16 @@ public class PlayerHealth : MonoBehaviour
 
     public void ChangeHealth(int amount)
 	{
-
+		currenthealth = maxHealth;
 	}
 
 	internal void TakeDamage(int damage)
 	{
-		throw new NotImplementedException();
-	}
+		currenthealth -= damage;
+
+        if (currenthealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
