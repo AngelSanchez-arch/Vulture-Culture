@@ -1,0 +1,40 @@
+using UnityEngine;
+using UnityEngine.Assertions.Must;
+
+public class MaskAbilities : MonoBehaviour
+{
+    public Masks mask;
+    public bool titmouse;
+    public bool woodpecker;
+    public bool cockatoo;
+
+    public void Start()
+    {
+        //mask = GetComponent<Masks>();
+    }
+
+    public void Update()
+    {
+        if (titmouse)
+        {
+            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.4f, 0.3f);
+
+        }
+        else if (woodpecker)
+        {
+            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+
+        }
+        else if (cockatoo)
+        {
+            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+
+        }
+        else
+        {
+            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+
+        }
+    }
+
+}
