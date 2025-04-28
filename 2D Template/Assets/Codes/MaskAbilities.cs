@@ -17,7 +17,7 @@ public class MaskAbilities : MonoBehaviour
     {
         if (titmouse)
         {
-            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.4f, 0.3f);
+            GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.35f, 0.3f);
 
         }
         else if (woodpecker)
@@ -28,6 +28,7 @@ public class MaskAbilities : MonoBehaviour
         else if (cockatoo)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+
 
         }
         else
