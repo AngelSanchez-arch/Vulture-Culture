@@ -10,6 +10,8 @@ public class PlayerCombat : MonoBehaviour
 	public LayerMask enemyLayers;
 
 	public float knockbackForce = 10;
+	public float knockbackTime = .15f;
+	public float stunTime = 1;
 	public float attackRange = 0.5f;
 	public int attackDamage = 40;
 
@@ -34,14 +36,14 @@ public class PlayerCombat : MonoBehaviour
 		// Play an attack animation
 		animator.SetTrigger("Attack");
 		// Detect eniemies in range of attack
-		Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+		Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, StatsManager.instance.attackRange, enemyLayers);
 
 		// Damage them
-		foreach(Collider2D enemy in enemies) 
+		foreach (Collider2D enemy in enemies)
 		{
 			int damage = 0;
 			enemies[0].GetComponent<EnemyDamage>().TakeDamage(-damage);
-			enemies[0].GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce);
+			enemies[0].GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
 		}
 	}
 
