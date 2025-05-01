@@ -184,6 +184,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Speed
     m_EventTreshold: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: UpFacing
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DownFacing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7432892558026956889}
   m_Solo: 0
@@ -461,13 +467,13 @@ AnimatorStateMachine:
     m_Position: {x: 790, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4751500952470721950}
-    m_Position: {x: 190, y: -240, z: 0}
+    m_Position: {x: 220, y: -250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6582843612334820580}
     m_Position: {x: 50, y: -120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5231658062971481776}
-    m_Position: {x: -70, y: -240, z: 0}
+    m_Position: {x: -50, y: -260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4953413907593365068}
     m_Position: {x: 50, y: -360, z: 0}
@@ -643,18 +649,21 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isSliding
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3396763698218279561}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75409836
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -671,6 +680,12 @@ AnimatorStateTransition:
     m_EventTreshold: 1
   - m_ConditionMode: 2
     m_ConditionEvent: isSliding
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: UpFacing
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: DownFacing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7432892558026956889}
@@ -784,11 +799,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
