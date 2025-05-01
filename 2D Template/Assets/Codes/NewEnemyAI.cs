@@ -1,13 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
-using UnityEngine.AI;
 using Pathfinding;
-using UnityEditor.Rendering;
 using System.Linq;
-using Unity.VisualScripting;
-using UnityEngine.Audio;
 
 public partial class NewEnemyAI : MonoBehaviour
 {
