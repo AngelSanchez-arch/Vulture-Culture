@@ -95,7 +95,7 @@ public class MainMenuManager : MonoBehaviour
 		#if UNITY_EDITOR
 			UnityEditor.EditorApplication.ExitPlaymode();
 		#else
-			Appication.Quit();
+			Application.Quit();
 		#endif
 	}
 	public void OpenMenu(GameObject menuToOpen) 

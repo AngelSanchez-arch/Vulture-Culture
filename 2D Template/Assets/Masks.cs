@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +6,6 @@ public class Masks : ScriptableObject
 {
     public Image Mask;
     public string MaskName;
-    public AnimatorController playerAnimator;
+    public RuntimeAnimatorController playerAnimator;
 
 }
