@@ -71,6 +71,24 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Dig"",
+                    ""type"": ""Button"",
+                    ""id"": ""81da8024-d001-4bf4-8da6-76a9103b997c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scream"",
+                    ""type"": ""Button"",
+                    ""id"": ""35d34dad-4065-4acb-8922-034290a0a988"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -302,6 +320,28 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""Slide"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""588bc13c-8156-445e-8d8a-db9e85e387fd"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dig"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce50bafd-2614-488e-8a1e-f564a3ddf99b"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scream"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -894,6 +934,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_ResetCamera = m_Player.FindAction("Reset Camera", throwIfNotFound: true);
         m_Player_Slide = m_Player.FindAction("Slide", throwIfNotFound: true);
+        m_Player_Dig = m_Player.FindAction("Dig", throwIfNotFound: true);
+        m_Player_Scream = m_Player.FindAction("Scream", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -978,6 +1020,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Fire;
     private readonly InputAction m_Player_ResetCamera;
     private readonly InputAction m_Player_Slide;
+    private readonly InputAction m_Player_Dig;
+    private readonly InputAction m_Player_Scream;
     public struct PlayerActions
     {
         private @ActionMap m_Wrapper;
@@ -987,6 +1031,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputAction @ResetCamera => m_Wrapper.m_Player_ResetCamera;
         public InputAction @Slide => m_Wrapper.m_Player_Slide;
+        public InputAction @Dig => m_Wrapper.m_Player_Dig;
+        public InputAction @Scream => m_Wrapper.m_Player_Scream;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1011,6 +1057,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Slide.started += instance.OnSlide;
             @Slide.performed += instance.OnSlide;
             @Slide.canceled += instance.OnSlide;
+            @Dig.started += instance.OnDig;
+            @Dig.performed += instance.OnDig;
+            @Dig.canceled += instance.OnDig;
+            @Scream.started += instance.OnScream;
+            @Scream.performed += instance.OnScream;
+            @Scream.canceled += instance.OnScream;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1030,6 +1082,12 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Slide.started -= instance.OnSlide;
             @Slide.performed -= instance.OnSlide;
             @Slide.canceled -= instance.OnSlide;
+            @Dig.started -= instance.OnDig;
+            @Dig.performed -= instance.OnDig;
+            @Dig.canceled -= instance.OnDig;
+            @Scream.started -= instance.OnScream;
+            @Scream.performed -= instance.OnScream;
+            @Scream.canceled -= instance.OnScream;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1217,6 +1275,8 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         void OnFire(InputAction.CallbackContext context);
         void OnResetCamera(InputAction.CallbackContext context);
         void OnSlide(InputAction.CallbackContext context);
+        void OnDig(InputAction.CallbackContext context);
+        void OnScream(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

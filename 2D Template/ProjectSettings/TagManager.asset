@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trap
   - Projectile
+  - Dig Spot
   layers:
   - Default
   - TransparentFX
