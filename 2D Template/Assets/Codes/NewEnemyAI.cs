@@ -23,6 +23,7 @@ public partial class NewEnemyAI : MonoBehaviour
     public int currentWaypoint = 0;
     private bool reachedEndOfPath = false;
     public bool isRandom;
+    private EnemyState enemyState;
 
     public List<GameObject> nodeList;
     public List<GameObject> currentTargetList;
@@ -31,6 +32,7 @@ public partial class NewEnemyAI : MonoBehaviour
 
     public Seeker seeker;
     public Rigidbody2D rb;
+    private Animator anim;
 
     public float speed;
     public float slerp;
@@ -152,18 +154,51 @@ public partial class NewEnemyAI : MonoBehaviour
                 currentWaypoint++;
             }
         }
+
         if (currentState == States.Attacking)
         {
             rb.linearVelocity = Vector2.zero;
         }
 
     }
+
+    void ChangeState(EnemyState newState) 
+    {
+        //Exit the current animation
+        if (enemyState == EnemyState.Idle)
+            anim.SetBool("isIdle", false);
+        else if (enemyState == EnemyState.Chasing)
+            anim.SetBool("isChasing", false);
+        else if (enemyState == EnemyState.Attacking)
+            anim.SetBool("isAttacking", false);
+
+        //Update our current state
+        enemyState = newState;
+
+        //Update the new animation
+        if (enemyState == EnemyState.Idle)
+            anim.SetBool("isIdle", true);
+        else if (enemyState != EnemyState.Chasing)
+            anim.SetBool("isChasing", true);
+        else if (enemyState == EnemyState.Attacking)
+			anim.SetBool("isAttacking", true);
+    
+    }
+
     public void OnDrawGizmos()
     {
         if (enemyPath is not null)
         {
             Gizmos.DrawWireSphere(enemyPath.vectorPath[currentWaypoint], 1);
         }
+    }
+
+    public enum EnemyState 
+    { 
+        Idle,
+        Chasing,
+        Attacking,
+        Knockback
     }
 }
 
