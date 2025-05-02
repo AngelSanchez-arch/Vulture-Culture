@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
@@ -23,6 +24,9 @@ public class MaskAbilities : MonoBehaviour
         else if (woodpecker)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+
+            woodpecker = GetComponent<Woodpecker>
+
 
         }
         else if (cockatoo)
