@@ -9,20 +9,22 @@ public class Woodpecker : MonoBehaviour
     [SerializeField] private Transform destination;
     public Masks mask;
     public bool woodpecker;
-  
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
         if (collision.tag == "Dig Spot" && collision.GetComponent<DigSpot>().nextSpot != null)
         {
             Debug.Log("dig site");
@@ -32,10 +34,10 @@ public class Woodpecker : MonoBehaviour
 
         }
         Debug.Log(" Nope");
-    }
+        }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
+        private void OnTriggerExit2D(Collider2D collision)
+        {
         if (collision.tag == "Dig Spot")
         {
             Debug.Log("left Dig site");
@@ -43,10 +45,16 @@ public class Woodpecker : MonoBehaviour
             nextSpot = null;
 
         }
-        Debug.Log(" Nope");
-    }
+         Debug.Log(" Nope");
+        }
+
+    
+
 
 
 }
+   
+
+
 
 

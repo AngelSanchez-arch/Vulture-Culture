@@ -173,7 +173,10 @@ public class Movement : MonoBehaviour
 
     public void Dig()
     {
-
+        if(!GetComponent<Woodpecker>().enabled)
+        {
+            return;
+        }
         if(canDig)
         {
 
