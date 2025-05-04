@@ -25,8 +25,6 @@ public class MaskAbilities : MonoBehaviour
         else if (woodpecker)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
-
-            woodpecker = GetComponent<Woodpecker>;
             woodpecker = true;
 
         }
