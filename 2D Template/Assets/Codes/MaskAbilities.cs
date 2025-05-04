@@ -32,12 +32,22 @@ public class MaskAbilities : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
             woodpecker = false;
-
+            
         }
         else
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
             woodpecker = false;
+            
+        }
+        
+        if (woodpecker == true)
+        {
+            FindFirstObjectByType<Woodpecker>().enabled = true;
+        }
+        if (woodpecker == false)
+        {
+            FindFirstObjectByType<Woodpecker>().enabled = false;
         }
     }
 
