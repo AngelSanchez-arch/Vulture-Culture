@@ -156,18 +156,18 @@ public partial class NewEnemyAI : MonoBehaviour
 
     }
 
-    void ChangeState(EnemyState newState) 
+     public void ChangeState(EnemyState newState) 
     {
         //Exit the current animation
         if (enemyState == EnemyState.Idle)
             anim.SetBool("isIdle", false);
         else if (enemyState == EnemyState.Chasing)
-            anim.SetBool("isChasing", false);
+			anim.SetBool("isChasing", false);
         else if (enemyState == EnemyState.Attacking)
             anim.SetBool("isAttacking", false);
 
-        //Update our current state
-        enemyState = newState;
+		//Update our current state
+		enemyState = newState;
 
         //Update the new animation
         if (enemyState == EnemyState.Idle)

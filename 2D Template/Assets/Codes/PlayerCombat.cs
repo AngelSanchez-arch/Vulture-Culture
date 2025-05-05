@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
 
 	public float knockbackForce = 10;
 	public float knockbackTime = .15f;
-	public float stunTime = 1;
+	public float stunTime = .3f;
 	public float attackRange = 0.5f;
 	public int attackDamage = 40;
 
@@ -43,7 +43,7 @@ public class PlayerCombat : MonoBehaviour
 		{
 			int damage = 0;
 			enemies[0].GetComponent<EnemyDamage>().TakeDamage(-damage);
-			enemies[0].GetComponent<Enemy_Knockback>().Knockback(transform, knockbackForce, knockbackTime, stunTime);
+			enemies[0].GetComponent<Enemy_Knockback>().Knockback(transform, StatsManager.instance.knockbackForce, StatsManager.instance.knockbackTime, StatsManager.instance.stunTime);
 		}
 	}
 
