@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
@@ -18,23 +19,35 @@ public class MaskAbilities : MonoBehaviour
         if (titmouse)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.35f, 0.3f);
+            woodpecker = false;
 
         }
         else if (woodpecker)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
+            woodpecker = true;
 
         }
         else if (cockatoo)
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
-
-
+            woodpecker = false;
+            
         }
         else
         {
             GameObject.Find("Player").GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.6f);
-
+            woodpecker = false;
+            
+        }
+        
+        if (woodpecker == true)
+        {
+            FindFirstObjectByType<Woodpecker>().enabled = true;
+        }
+        if (woodpecker == false)
+        {
+            FindFirstObjectByType<Woodpecker>().enabled = false;
         }
     }
 

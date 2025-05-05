@@ -22,6 +22,8 @@ public class Movement : MonoBehaviour
     private float SlidingTime = 0.2f;
     private float SlidingCooldown = 1f;
     private Vector2 LastDirection;
+    private bool canDig;
+    private GameObject nextSpot;
 
     [SerializeField] private TrailRenderer tr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -138,5 +140,51 @@ public class Movement : MonoBehaviour
     public void Slide(InputAction.CallbackContext ctx)
     {
         StartCoroutine(Dash());
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Dig Spot" && collision.GetComponent<DigSpot>().nextSpot != null)
+        {
+            Debug.Log("dig site");
+            canDig = true;
+            nextSpot = collision.GetComponent<DigSpot>().nextSpot;
+
+
+        }
+        Debug.Log(" Nope");
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Dig Spot")
+        {
+            Debug.Log("left Dig site");
+            canDig = false;
+            nextSpot = null;
+
+        }
+        Debug.Log(" Nope");
+    }
+
+
+
+
+    public void Dig()
+    {
+        if(!GetComponent<Woodpecker>().enabled)
+        {
+            return;
+        }
+        if(canDig)
+        {
+
+         transform.position = nextSpot.transform.position;
+        }
+        else
+        {
+            Debug.Log("not at a Dig Site!");
+        }
     }
 }

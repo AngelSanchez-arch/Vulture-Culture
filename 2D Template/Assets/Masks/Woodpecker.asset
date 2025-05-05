@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mask: {fileID: 0}
   MaskName: 
-  playerAnimator: {fileID: 9100000, guid: a7478f9495b6f034bb2337ad3dee80eb, type: 2}
+  playerAnimator: {fileID: 9100000, guid: 24cfd4cd25362af47a6e3b81efd0f5ea, type: 2}
