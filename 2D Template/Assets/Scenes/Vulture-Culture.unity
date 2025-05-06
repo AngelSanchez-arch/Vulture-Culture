@@ -1721,6 +1721,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSpot: {fileID: 525307501}
+--- !u!4 &1132333038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9106815717882755044, guid: 8b665adc287d0814494610c5868f536c, type: 3}
+  m_PrefabInstance: {fileID: 1641330203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1136235867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3780,6 +3785,7 @@ GameObject:
   - component: {fileID: 2129811584}
   - component: {fileID: 2129811585}
   - component: {fileID: 2129811586}
+  - component: {fileID: 2129811587}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4267,6 +4273,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbca3bc76da134a4cb310c1a8a5dc020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2129811587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129811575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afbd10ad926c32a4fac77ff252d30d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 570869143}
+  destination: {fileID: 1132333038}
+  mask: {fileID: 11400000, guid: 3ac44ad81f619e14a9b20f93a6751e8f, type: 2}
+  woodpecker: 0
 --- !u!1001 &5048274755631664318
 PrefabInstance:
   m_ObjectHideFlags: 0
