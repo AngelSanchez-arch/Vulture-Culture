@@ -24,6 +24,7 @@ public class Movement : MonoBehaviour
     private Vector2 LastDirection;
     private bool canDig;
     private GameObject nextSpot;
+    private bool isKnockedBack;
 
     [SerializeField] private TrailRenderer tr;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -96,6 +97,22 @@ public class Movement : MonoBehaviour
     //called once per Physics frame - Used for physics(Used for movement)
     private void FixedUpdate()
     {
+        if (isKnockedBack) 
+        {
+            float horizontal = Input.GetAxis("Horzontal");
+            float vertical = Input.GetAxis("Vertical");
+
+            if (horizontal > 0 && transform.localScale.x < 0 ||
+                horizontal < 0 && transform.localScale.x > 0) 
+            { 
+                Flip();
+                animator.SetFloat("horizontal", Mathf.Abs(horizontal));
+                animator.SetFloat("vertical", Mathf.Abs((vertical)));
+
+				rb.linearVelocity = new Vector2(horizontal, vertical) * StatsManager.instance.speed;
+            }
+
+		}
         if (IsSliding)
         {
             return;
