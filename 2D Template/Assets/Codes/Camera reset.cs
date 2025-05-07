@@ -20,7 +20,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public void Movecamera(InputAction.CallbackContext ctx, int pos)
     {
         Vector2 amount = ctx.ReadValue<Vector2>();
-        (int, int, int) Pos = (0, 0, -10);
-        offset = pos;
+       // (int, int, int) Pos = (0, 0, -10);
+        //offset = pos;
     }
 }
