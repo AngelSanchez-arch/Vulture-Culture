@@ -10,9 +10,9 @@ public partial class NewEnemyAI : MonoBehaviour
 
     public enum States {Roaming, Chasing, Attacking}
     public States currentState = States.Roaming;
-    public Transform target;
-    public GameObject player;
-    public float nextWaypointDistance = 3f;
+	public Transform target;
+	public GameObject player;
+	public float nextWaypointDistance = 3f;
     private Pathfinding.Path enemyPath;
     public int currentWaypoint = 0;
     private bool reachedEndOfPath = false;

@@ -7,7 +7,7 @@ public class EnemyDamage : MonoBehaviour
     public int damage = 2;
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
-    {
+	{
         playerHealth = FindFirstObjectByType<PlayerHealth>();
     }
 
