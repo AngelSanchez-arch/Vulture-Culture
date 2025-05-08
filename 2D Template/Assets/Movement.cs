@@ -126,7 +126,7 @@ public class Movement : MonoBehaviour
         {
             Vector2 localScale = transform.localScale;
             isFacingRight = !isFacingRight;
-            localScale.x *= -1f;
+            localScale.x *= 1f;
             transform.localScale = localScale;
         }
     }

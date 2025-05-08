@@ -533,6 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4046289cf35891a4480b14bb4d5003f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  newWidth: 0
+  newHeight: 0
   mask: {fileID: 0}
   titmouse: 0
   woodpecker: 1
@@ -605,6 +608,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4046289cf35891a4480b14bb4d5003f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  newWidth: 0
+  newHeight: 0
   mask: {fileID: 0}
   titmouse: 1
   woodpecker: 0
@@ -2931,6 +2937,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4046289cf35891a4480b14bb4d5003f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  newWidth: 0
+  newHeight: 0
   mask: {fileID: 0}
   titmouse: 0
   woodpecker: 0
@@ -3661,6 +3670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4046289cf35891a4480b14bb4d5003f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  newWidth: 0
+  newHeight: 0
   mask: {fileID: 0}
   titmouse: 0
   woodpecker: 0
@@ -4073,8 +4085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2129811585}
-  vertical: 3
-  horizontal: 3
+  vertical: 0
+  horizontal: 0
   speed: 3
   sliding:
     m_Name: Sliding

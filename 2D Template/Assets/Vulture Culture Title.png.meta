@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Vulture Culture Title_0: -7636321326512376436
+      Vulture Culture Title_1: -2239114735325975496
+      Vulture Culture Title_2: 3872389681845560879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
