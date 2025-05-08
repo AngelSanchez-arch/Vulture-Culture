@@ -64,6 +64,14 @@ public class MaskAbilities : MonoBehaviour
         {
             FindFirstObjectByType<Titmouse>().enabled = false;
         }
+        if (cockatoo == true)
+        {
+            FindFirstObjectByType<Coctatoo>().enabled = true;
+        }
+        if (cockatoo == false)
+        {
+            FindFirstObjectByType<Coctatoo>().enabled = false;
+        }
     }
 
 }
