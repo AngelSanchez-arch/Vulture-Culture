@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
     private float SlidingCooldown = 1f;
     private Vector2 LastDirection;
     private bool canDig;
+    private bool canStun; 
     private GameObject nextSpot;
     private bool isKnockedBack;
 
@@ -161,35 +162,36 @@ public class Movement : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "Dig Spot" && collision.GetComponent<DigSpot>().nextSpot != null)
-        {
-            Debug.Log("dig site");
-            canDig = true;
-            nextSpot = collision.GetComponent<DigSpot>().nextSpot;
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.tag == "Stun Spot" && collision.GetComponent<StunSpot>().nextSpot != null)
+		{
+			Debug.Log("Stun site");
+			canDig = true;
+			nextSpot = collision.GetComponent<StunSpot>().nextSpot;
 
 
-        }
-        Debug.Log(" Nope");
-    }
+		}
+		Debug.Log(" Nope");
+	}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Dig Spot")
-        {
-            Debug.Log("left Dig site");
-            canDig = false;
-            nextSpot = null;
+	private void OnTriggerExit2D(Collider2D collision)
+	{
+		if (collision.tag == "stun Spot")
+		{
+			Debug.Log("left stun site");
+			canDig = false;
+			nextSpot = null;
 
-        }
-        Debug.Log(" Nope");
-    }
-
-
+		}
+		Debug.Log(" Nope");
+	}
 
 
-    public void Dig()
+
+
+	public void Dig()
     {
         if(!GetComponent<Woodpecker>().enabled)
         {
@@ -203,6 +205,23 @@ public class Movement : MonoBehaviour
         else
         {
             Debug.Log("not at a Dig Site!");
+        }
+    }
+
+    public void Stun() 
+    { 
+        if (!GetComponent<Coctatoo>().enabled) 
+        {
+            return; 
+        }
+        if (canStun)
+        {
+
+            transform.position = nextSpot.transform.position;
+        }
+        else 
+        {
+            Debug.Log("not at a Stun Site!");
         }
     }
 }
