@@ -122,12 +122,13 @@ public class Movement : MonoBehaviour
     }
     private void Flip()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (horizontal < 0f)
         {
-            Vector2 localScale = transform.localScale;
-            isFacingRight = !isFacingRight;
-            localScale.x *= 1f;
-            transform.localScale = localScale;
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else if (horizontal > 0f)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
         }
     }
     private IEnumerator Dash()
