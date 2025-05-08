@@ -23,7 +23,7 @@ public class EnemyBulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
 
         if (timer > 10)
         {
@@ -31,11 +31,11 @@ public class EnemyBulletScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+      //  if (other.gameObject.CompareTag("Player"))
+     //   {
+     //       Destroy(gameObject);
+      //  }
+  //  }
 }

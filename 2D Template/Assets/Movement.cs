@@ -123,23 +123,29 @@ public class Movement : MonoBehaviour
     }
     private void Flip()
     {
-        if (horizontal < 0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (horizontal > 0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+            if (horizontal < 0f)
+            {
+                Vector2 localScale = transform.localScale;
+                isFacingRight = !isFacingRight;
+                localScale.x *= 1f;
+                transform.localScale = localScale;
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (horizontal > 0f)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
     }
     private IEnumerator Dash()
     {
        
-        canSlide = false;
+       canSlide = false;
        IsSliding = true;
-        animator.SetBool("IsSliding", true);
-        Debug.Log(animator.GetFloat("Speed"));
-        rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection
+       animator.SetBool("IsSliding", true);
+       Debug.Log(animator.GetFloat("Speed"));
+       rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection           
        tr.emitting = true;
        yield return new WaitForSeconds(SlidingTime);
        tr.emitting = false;
