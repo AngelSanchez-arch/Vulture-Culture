@@ -31,11 +31,11 @@ public class EnemyBulletScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+      //  if (other.gameObject.CompareTag("Player"))
+     //   {
+     //       Destroy(gameObject);
+      //  }
+  //  }
 }

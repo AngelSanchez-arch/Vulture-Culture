@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
@@ -11,6 +12,7 @@ public class EnemyShooting : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     private void Update()
@@ -24,13 +26,20 @@ public class EnemyShooting : MonoBehaviour
             if (timer > 2)
             {
                 timer = 0;
-                shoot();
+                StartCoroutine(shoot());
             }
         }
     }
 
-    void shoot()
+    IEnumerator shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(.25f);
+
+        foreach (var item in FindFirstObjectByType<EnemyBulletScript>().GetComponents<CircleCollider2D>())
+        {
+            item.enabled = true;
+        }
     }
 }
