@@ -123,13 +123,8 @@ public class Movement : MonoBehaviour
     }
     private void Flip()
     {
-        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
             if (horizontal < 0f)
             {
-                Vector2 localScale = transform.localScale;
-                isFacingRight = !isFacingRight;
-                localScale.x *= 1f;
-                transform.localScale = localScale;
                 GetComponent<SpriteRenderer>().flipX = true;
             }
             else if (horizontal > 0f)
@@ -145,7 +140,8 @@ public class Movement : MonoBehaviour
        IsSliding = true;
        animator.SetBool("IsSliding", true);
        Debug.Log(animator.GetFloat("Speed"));
-       rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection           
+        float x = GetComponent<SpriteRenderer>().flipX ? -1:1 ;
+       rb.linearVelocity = new Vector2(x * SlidingPower, 0f); //inside of Bracket xDirection           
        tr.emitting = true;
        yield return new WaitForSeconds(SlidingTime);
        tr.emitting = false;

@@ -88,7 +88,7 @@ public class MainMenuManager : MonoBehaviour
 	}
 	public void PlayClicked() 
 	{
-		SceneManager.LoadScene(_sceneToLoadAfterClickingPlay);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneToLoadAfterClickingPlay);
 	}
 	public void QuitGame() 
 	{ 
