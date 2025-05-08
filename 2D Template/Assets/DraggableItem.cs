@@ -26,16 +26,6 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
-
-        //OnCollisionEnter2D();
     }
-    private void OnCollisionEnter2D(Collision2D collider)
-    {
-        //if (collider.gameObject.CompareTag("EquipedMask"))
-        { 
-            // Right now it sets the player sprite and animation regardless if wether or not the item is parented to the inventory slot. Simple fix I just can't get. Find object to work so that it only switches once its parented
-            //FindAnyObjectByType<ToggleMask>().gameObject.GetComponentInChildren<SpriteRenderer>().sprite = image.sprite;
-            //FindAnyObjectByType<ToggleMask>().gameObject.GetComponent<Animator>().runtimeAnimatorController = currentMask.playerAnimator;
-        }
-    }
+    
 }
