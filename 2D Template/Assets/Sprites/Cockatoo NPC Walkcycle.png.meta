@@ -535,7 +535,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cockatoo NPC Walkcycle_0: -1319572723896207229
+      Cockatoo NPC Walkcycle_1: -6028791553162635854
+      Cockatoo NPC Walkcycle_10: 8550935386334113103
+      Cockatoo NPC Walkcycle_11: 9134881807193949257
+      Cockatoo NPC Walkcycle_12: -2704923316564345330
+      Cockatoo NPC Walkcycle_13: 6808692706721190187
+      Cockatoo NPC Walkcycle_14: -3200617260649506769
+      Cockatoo NPC Walkcycle_15: 3143901402682179584
+      Cockatoo NPC Walkcycle_2: -4844304548677226051
+      Cockatoo NPC Walkcycle_3: -7675641599766942804
+      Cockatoo NPC Walkcycle_4: 5608010879663726171
+      Cockatoo NPC Walkcycle_5: 2077674299482428389
+      Cockatoo NPC Walkcycle_6: -2619287155170950389
+      Cockatoo NPC Walkcycle_7: 5934630359185804728
+      Cockatoo NPC Walkcycle_8: -4902056596496233906
+      Cockatoo NPC Walkcycle_9: -3324101413700882195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
