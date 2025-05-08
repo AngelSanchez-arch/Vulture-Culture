@@ -167,11 +167,11 @@ public class Movement : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Stun Spot" && collision.GetComponent<StunSpot>().nextSpot != null)
+		if (collision.tag == "Dig Spot" && collision.GetComponent<DigSpot>().nextSpot != null)
 		{
 			Debug.Log("Stun site");
 			canDig = true;
-			nextSpot = collision.GetComponent<StunSpot>().nextSpot;
+			nextSpot = collision.GetComponent<DigSpot>().nextSpot;
 
 
 		}
@@ -180,7 +180,7 @@ public class Movement : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (collision.tag == "stun Spot")
+		if (collision.tag == "Dig Spot")
 		{
 			Debug.Log("left stun site");
 			canDig = false;
