@@ -12,10 +12,10 @@ public class GameOverScreen : MonoBehaviour {
 
 
 	public void RestartButton() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+		SceneManager.LoadScene("Game");
 	}
 
     public void ExitButton() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+		SceneManager.LoadScene("Mainmenu");
 	}
 }
