@@ -123,23 +123,25 @@ public class Movement : MonoBehaviour
     }
     private void Flip()
     {
-        if (horizontal < 0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else if (horizontal > 0f)
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
+            if (horizontal < 0f)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+            }
+            else if (horizontal > 0f)
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+            }
+
     }
     private IEnumerator Dash()
     {
        
-        canSlide = false;
+       canSlide = false;
        IsSliding = true;
-        animator.SetBool("IsSliding", true);
-        Debug.Log(animator.GetFloat("Speed"));
-        rb.linearVelocity = new Vector2(transform.localScale.x * SlidingPower, 0f); //inside of Bracket xDirection
+       animator.SetBool("IsSliding", true);
+       Debug.Log(animator.GetFloat("Speed"));
+        float x = GetComponent<SpriteRenderer>().flipX ? -1:1 ;
+       rb.linearVelocity = new Vector2(x * SlidingPower, 0f); //inside of Bracket xDirection           
        tr.emitting = true;
        yield return new WaitForSeconds(SlidingTime);
        tr.emitting = false;
@@ -165,11 +167,11 @@ public class Movement : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (collision.tag == "Stun Spot" && collision.GetComponent<StunSpot>().nextSpot != null)
+		if (collision.tag == "Dig Spot" && collision.GetComponent<DigSpot>().nextSpot != null)
 		{
 			Debug.Log("Stun site");
 			canDig = true;
-			nextSpot = collision.GetComponent<StunSpot>().nextSpot;
+			nextSpot = collision.GetComponent<DigSpot>().nextSpot;
 
 
 		}
@@ -178,7 +180,7 @@ public class Movement : MonoBehaviour
 
 	private void OnTriggerExit2D(Collider2D collision)
 	{
-		if (collision.tag == "stun Spot")
+		if (collision.tag == "Dig Spot")
 		{
 			Debug.Log("left stun site");
 			canDig = false;

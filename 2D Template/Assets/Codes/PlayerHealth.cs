@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
         if (currenthealth <= 0)
         {
             Destroy(gameObject);
-            SceneManager.LoadScene("Mainmenu");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Mainmenu");
         }
     }
 }
